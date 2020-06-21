@@ -1,24 +1,46 @@
-# README
+# usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Optinos|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|name|string|null: false|
 
-Things you may want to cover:
+### Association
+- has_many :groups
+- has_many :message
 
-* Ruby version
+## groupsテーブル
 
-* System dependencies
+|Column|Type|Optinos|
+|------|----|-------|
+|groupname|string|null: false|
+|add-menber|string|
 
-* Configuration
+### Association
+- belongs_to :user
+- has_many :message
 
-* Database creation
+## messagesテーブル
 
-* Database initialization
+|Column|Type|Optinos|
+|------|----|-------|
+|message|syring|null: false|
+|image|text||
+|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
 
-* How to run the test suite
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Services (job queues, cache servers, search engines, etc.)
+# groups_usersテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* ...
+### Association
+- belongs_to :group
+- belongs_to :user
