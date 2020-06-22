@@ -7,28 +7,31 @@
 |name|string|null: false|
 
 ### Association
+- has_many :departments, throuth: :groups_users
 - has_many :groups
-- has_many :message
+- has_many :groups_users
+- has_many :messages
 
 ## groupsテーブル
 
 |Column|Type|Optinos|
 |------|----|-------|
-|groupname|string|null: false|
-|add-menber|string|
+|name|string|null: false|
 
 ### Association
-- belongs_to :user
-- has_many :message
+- has_many :users, :througt: :groups_users
+- has_many :users
+- has_many :groups_users
+- has_many :messages
 
 ## messagesテーブル
 
 |Column|Type|Optinos|
 |------|----|-------|
-|message|syring|null: false|
+|message|text|null: false|
 |image|text||
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
