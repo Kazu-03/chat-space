@@ -19,7 +19,7 @@
       font-size: 16px;
       &__menu {
         display: flex;
-          .btn {
+          .icon {
             color: white;
             margin: 5px;
           }
@@ -31,14 +31,18 @@
     height: calc(100vh - 100px);
     font-weight: bold;
     padding: 0 20px;
-    &__message {
-      padding-top: 20px;
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__message-list {
-      font-size: 11px;
-      margin-bottom: 40px;
+    color: white;
+    .group {
+      color: white;
+      &__name {
+        padding-top: 20px;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
