@@ -33,7 +33,9 @@
     padding: 0 20px;
     color: white;
     .group {
-      color: white;
+      .btn-group {
+        color: white;
+        text-decoration: none;
       &__name {
         padding-top: 20px;
         font-size: 15px;
@@ -42,6 +44,7 @@
       &__message {
         font-size: 11px;
         margin-bottom: 40px;
+      }
       }
     }
   }
@@ -77,13 +80,18 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      .btn-edit {
+        text-decoration: none;
+        color: #38aef0;
+      }
     }
   }
-  .message {
+  .messages {
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding-top: 35px;
-      padding-left: 40px;
+    padding-left: 40px;
+    overflow: scroll;
     &__info {
       display: flex;
       &__talker {
@@ -106,38 +114,39 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    .new-massage {
+    .new_message {
       display: flex;
-      .input-box {
-        width: 100%;
+      .form__mask {
         position: relative;
-        display: flex;
-        &__text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #999999;
-        }
-        &__image {
-          position: absolute;
-          right: 10px;
-          top: 15px;
-          cursor: pointer;
-        }
-        .hidden {
-          display: none;
-        }
+        width: 100%;
+          .form__message {
+            height: 50px;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            color: #999999;
+          }
+          &__image {
+            right: 10px;
+            top: 15px;
+            cursor: pointer;
+            position: absolute;
+            .hidden {
+            display: none;
+            }
+            .icon {
+              }
+            }
+          }
+    .form__submit {
+      height: 50px;
+      width: 100px;
+      padding: 0 20px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: #fafafa;
       }
-      .message-submit {
-        height: 50px;
-        width: 100px;
-        padding: 0 20px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: #fafafa;
       }
     }
   }
-}
 
 
